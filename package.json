@@ -1,0 +1,51 @@
+{
+  "name": "qq-pet-widget",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QQ宠物独立浮窗桌面挂件",
+  "author": "ice-cream-headache",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --qqpet-dev",
+    "start:dev": "electron . --qqpet-dev",
+    "start:mock": "set QQPET_DEV=1&& electron . --qqpet-dev",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^33.3.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.icecreamheadache.qqpetwidget",
+    "productName": "QQPetWidget",
+    "asar": true,
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "**/*",
+      "!dist-electron/**",
+      "!dist-electron*/**",
+      "!.qqpet-userdata/**",
+      "!.trae/**",
+      "!node_modules/.cache/**"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "3.png",
+      "signAndEditExecutable": false,
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

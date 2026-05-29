@@ -1,0 +1,6 @@
+node_modules/
+dist-electron/
+dist-electron*/
+.qqpet-userdata/
+*.log
+*.tmp

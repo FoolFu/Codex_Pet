@@ -1,0 +1,11 @@
+{
+  "codexHome": "C:\\Users\\your.name\\.codex",
+  "sessionsRoot": null,
+  "sessionIndexPath": null,
+  "globalStatePath": null,
+  "visiblePollMs": 15000,
+  "hiddenPollMs": 60000,
+  "staleAfterMs": 120000,
+  "debugPanelEnabled": true,
+  "mockStateEnabled": true
+}
