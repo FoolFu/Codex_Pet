@@ -87,7 +87,7 @@
 先进入项目目录：
 
 ```bash
-cd d:\mywork\stuff\ice-cream-headache.github.io-main\ice-cream-headache.github.io-main
+cd Codex_Pet
 ```
 
 安装依赖后启动：
